@@ -9,6 +9,7 @@ if __name__ == '__main__':
     sys.path.append(__root)
 from torch.utils.data import ConcatDataset
 
+raise FileNotFoundError('Put your own dataset directory and comment this line out.')
 __DOMAINBED_ROOT = os.path.expanduser('~/.cache/domainbed')
 
 
