@@ -2,6 +2,16 @@
 
 The official PyTorch implementation of "A2XP: Towards Private Domain Generalization".
 
+## Summary
+
+### Abstract
+
+> Deep Neural Networks (DNNs) have become pivotal in various fields, especially in computer vision, outperforming previous methodologies. A critical challenge in their deployment is the bias inherent in data across different domains, such as image style, and environmental conditions, leading to domain gaps. This necessitates techniques for learning general representations from biased training data, known as domain generalization. This paper presents Attend to eXpert Prompts (A2XP), a novel approach for domain generalization that preserves the privacy and integrity of the network architecture. A2XP consists of two phases: Expert Adaptation and Domain Generalization. In the first phase, prompts for each source domain are optimized to guide the model towards the optimal direction. In the second phase, two embedder networks are trained to effectively amalgamate these expert prompts, aiming for an optimal output. Our extensive experiments demonstrate that A2XP achieves state-of-the-art results over existing non-private domain generalization methods. The experimental results validate that the proposed approach not only tackles the domain generalization challenge in DNNs but also offers a privacy-preserving, efficient solution to the broader field of computer vision.
+
+### Figures
+
+![Figures](./figures/figures.png)
+
 ## Environment
 
 ### Specification
@@ -81,4 +91,18 @@ dict(
 )
 ```
 
-End of Document.
+## Contact
+
+For any questions, discussions, and proposals, please contact us at `geunhyeok@khu.ac.kr`. 
+
+## Citation
+
+Please consider citing this work if you use our code in your research:
+```
+@article{yu2023a2xp,
+   title={A2XP: Towards Private Domain Generalization},
+   author={Yu, Geunhyeok and Hwang, Hyoseok},
+   journal={arXiv preprint arXiv:2311.10339},
+   year={2023}
+}
+```
