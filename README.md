@@ -12,9 +12,11 @@ The official PyTorch implementation of "[A2XP: Towards Private Domain Generaliza
 
 ![Figures](./figures/figures.png)
 
-## Environment
+## Getting Started
 
-### Specification
+### Environment
+
+#### Specification
 
 This implementation was tested on Ubuntu 18.04 environment. 
 The detailed specification is as follows:
@@ -26,7 +28,7 @@ The detailed specification is as follows:
    - Python 3.11.5
    - PyTorch 2.0.1
 
-### Setup
+#### Setup
 
 Please run the command below to reproduce our `Anaconda3` virtual environment. 
 
@@ -34,9 +36,9 @@ Please run the command below to reproduce our `Anaconda3` virtual environment.
 $ conda env create --file environment.yaml
 ```
 
-## Experimentation
+### Experimentation
 
-### Expert Adaptation
+#### Expert Adaptation
 
 You can train expert prompts by running
 
@@ -57,7 +59,7 @@ $ python train_expert.py --model vit_base_patch16_clip_224.openai --dataset pacs
 ```
 `timm` models are basically supported and CLIP-pretrained ResNet50 and ImageNet-1K-pretrained ViT-Base are also supported as `resnet50.clip` and `vit_base_patch16.tv_in1k` respectively.
 
-### Attention-based Generalization
+#### Attention-based Generalization
 
 The attention-based generalization step of A2XP can be performed by running code below.
 
