@@ -207,7 +207,15 @@
       <div class="container">
         <h2 class="title is-3">Experimental Results</h2>
 
-        <h5 class="title is-5">Target & Source Domain Evaluation</h3>        
+        <h5 class="title is-5">Target & Source Domain Evaluation</h3> 
+        <p style="margin-bottom:2em;">
+          Leave-one-domain-out evaluation and source domain evaluation was conducted to assess the generalizability of A2XP the results of which are detailed in Table 1.
+          See Table 1a. 
+          The five baselines were augmented using DART, which is an ensemble learning-based method for domain generalization. 
+          A2XP outperformed all other methods in each target domain on both PACS and VLCS datasets. 
+          It is important to mention that DART does not ensure the privacy of the objective network.
+          Evaluation on all source domains well performed as much as on the target domain as shown in Table 1b.
+        </p>
         <figure style="text-align: center; margin-bottom: 1em;">
           <img src="static/tables/tab1a.png" alt="fail">
           <figcaption class="content has-text-centered" style="word-break:normal">
@@ -221,18 +229,29 @@
           </figcaption>
         </figure>
         <figcaption class="content has-text-left" style="word-break:normal; margin-bottom: 2em;">
-          <b>Table 1.</b> Target domain and source domain evaluations. Target domain evaluation was conducted to compare A2XP with other state-ofthe-art methods. Source domain evaluation was conducted to see if it is still effective in the source domains.
+          <b>Table 1.</b> Target domain and source domain evaluations. Target domain evaluation was conducted to compare A2XP with other state-of-the-art methods. Source domain evaluation was conducted to see if it is still effective in the source domains.
         </figcaption>
 
         <h5 class="title is-5">Effectiveness of A2XP Module</h3> 
+        <p style="margin-bottom:2em;">
+          Ablation study was performed to demonstrate the efficacy of the A2XP module by quantifying its impact on accuracy enhancement with commonly used fine-tuning approaches such as linear probing and full tuning.
+          As shown in Table 2, tuning the hidden layers appeared to impact the tuning of the output layer negatively. With the integration of A2XP in linear probing, accuracy was significantly increased across all tested domains. 
+          However, in the case of full tuning, the inclusion of A2XP was counterproductive. 
+          We analyzed that full tuning is inherently unstable; thus, the A2XP module, positioned before the hidden layers, was adversely affected.
+        </p>
         <figure style="text-align: center; margin-bottom: 1em;">
           <img src="static/tables/tab2.png" alt="fail">
-          <figcaption class="content has-text-left" style="word-break:normal; margin-bottom: 2em;">
+          <figcaption class="content has-text-centered" style="word-break:normal; margin-bottom: 2em;">
             <b>Table 2.</b> Comparison of tuning range on the objective network with and without A2XP. FT and LP refer to Full Tuning and Linear Probing, respectively.
           </figcaption>
         </figure>
 
-        <h5 class="title is-5">Harmonic Convergence</h3> 
+        <h5 class="title is-5">Harmonized Domain Gathering</h3> 
+        <p style="margin-bottom:2em;">
+          The manifold space of the features extracted from the last hidden layer was visualized.
+          As shown in Figure 5, to observe how the classes and domains are represented in a 2-dimensional space.
+          Figure 5a-5d shows generalized features are mapped similarly regardless of the target domain.
+        </p>
         <figure style="text-align: center; margin-bottom: 1em;">
           <img src="static/images/fig5.png" alt="fail">
           <figcaption class="content has-text-left" style="word-break:normal; margin-bottom: 2em;">
@@ -241,10 +260,22 @@
         </figure>
 
         <h5 class="title is-5">Activation Gain & Loss</h3> 
+        <p style="margin-bottom:2em;">
+          To help understand the effects of A2XP on the neural network's focus, we visualized the activation maps. 
+          Table 6 demonstrates that while linear probing is generalized in a way, the takes the generalizability even further. 
+          This suggests that linear probing without A2XP yields reasonably effective activation maps, and the incorporation of A2XP further refines and improves these activation maps.
+          The prompts shown in the (b) row change the activation maps as much as shown in (c) and (d). 
+          The prompts have similar expression because they are from the same experts, but the intensities are different or some of them seem inverted. 
+          This means the experts are mixed in different ratios dependent on the target image. 
+          They show that A2XP makes the network attend more to the face representation and kills activation on other representations, such as the backgrounds or the body of an animal. 
+          Specifically in the Picture domain, (c) shows that it primarily activates the ears of the dog and deactivates the background. 
+          In the Sketch domain, it activates representations around the head while it deactivates the background next to the neck and the body, which contains fewer domain-agnostic clues for classification. 
+
+        </p>
         <figure style="text-align: center; margin-bottom: 1em;">
           <img src="static/images/fig6.png" alt="fail" width="90%">
           <figcaption class="content has-text-left" style="word-break:normal;">
-            <b>Figure 5.</b> Activation visualization of A2XP using Grad-CAM. (a) shows the input image, (c) and (d) show the relative gain and loss of activation using A2XP prompts in (b), respectively.
+            <b>Figure 6.</b> Activation visualization of A2XP using Grad-CAM. (a) shows the input image, (c) and (d) show the relative gain and loss of activation using A2XP prompts in (b), respectively.
           </figcaption>
         </figure>
 
