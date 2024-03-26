@@ -270,15 +270,9 @@
 
         <h5 class="title is-5">Activation Gain & Loss</h3> 
         <p style="margin-bottom:2em;">
-          To help understand the effects of A2XP on the neural network's focus, we visualized the activation maps. 
-          Table 6 demonstrates that while linear probing is generalized in a way, the takes the generalizability even further. 
-          This suggests that linear probing without A2XP yields reasonably effective activation maps, and the incorporation of A2XP further refines and improves these activation maps.
-          The prompts shown in the (b) row change the activation maps as much as shown in (c) and (d). 
-          The prompts have similar expression because they are from the same experts, but the intensities are different or some of them seem inverted. 
+          The activation maps were visualized to help understand the effects of A2XP on the neural network's focus. See Figure 6.
+          It shows that linear probing without A2XP yields reasonably effective activation maps, and the incorporation of A2XP further refines and improves these activation maps.
           This means the experts are mixed in different ratios dependent on the target image. 
-          They show that A2XP makes the network attend more to the face representation and kills activation on other representations, such as the backgrounds or the body of an animal. 
-          Specifically in the Picture domain, (c) shows that it primarily activates the ears of the dog and deactivates the background. 
-          In the Sketch domain, it activates representations around the head while it deactivates the background next to the neck and the body, which contains fewer domain-agnostic clues for classification. 
 
         </p>
         <figure style="text-align: center; margin-bottom: 1em;">
