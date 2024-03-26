@@ -129,10 +129,11 @@ SOFTWARE.
 
 Please consider citing this work if you use our code in your research:
 ```
-@article{yu2023a2xp,
+@InProceedings{Yu_2024_CVPR,
    title={A2XP: Towards Private Domain Generalization},
    author={Yu, Geunhyeok and Hwang, Hyoseok},
-   journal={arXiv preprint arXiv:2311.10339},
-   year={2023}
+   booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+   month={June}
+   year={2024}
 }
 ```
