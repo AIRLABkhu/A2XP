@@ -1,6 +1,6 @@
 # A2XP: Towards Private Domain Generalization
 
-The official PyTorch implementation of "[A2XP: Towards Private Domain Generalization](https://arxiv.org/abs/2311.10339)" (arXiv 2023).
+The official PyTorch implementation of "[A2XP: Towards Private Domain Generalization](https://arxiv.org/abs/2311.10339)" (CVPR 2024).
 
 ## Summary
 
