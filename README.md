@@ -1,6 +1,6 @@
 # A2XP: Towards Private Domain Generalization
 
-The official PyTorch implementation of "[A2XP: Towards Private Domain Generalization](https://arxiv.org/abs/2311.10339)" (CVPR 2024).
+The official PyTorch implementation of "[A2XP: Towards Private Domain Generalization](https://openaccess.thecvf.com/content/CVPR2024/html/Yu_A2XP_Towards_Private_Domain_Generalization_CVPR_2024_paper.html)" (CVPR 2024).
 
 ## Summary
 
@@ -130,10 +130,11 @@ SOFTWARE.
 Please consider citing this work if you use our code in your research:
 ```
 @InProceedings{Yu_2024_CVPR,
-   title={A2XP: Towards Private Domain Generalization},
-   author={Yu, Geunhyeok and Hwang, Hyoseok},
-   booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-   month={June}
-   year={2024}
+    author    = {Yu, Geunhyeok and Hwang, Hyoseok},
+    title     = {A2XP: Towards Private Domain Generalization},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {23544-23553}
 }
 ```
